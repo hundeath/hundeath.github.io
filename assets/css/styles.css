@@ -1,0 +1,342 @@
+/*General styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+ul,nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: 0.7;
+    color: #fff;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+a.button {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    opacity: 1;
+}
+
+a.keretlink {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    opacity: 0.9;
+}
+
+a.keretlink:hover {
+    opacity: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section h3.title {
+    color: #555555;
+    font: bold 32px "Fjalla One" ,sans-serif;
+}
+
+section:not(.hero):nth-child(even) {
+    background: #f5f5f5;
+}
+
+.tabla {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #555555;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+/*Header styles*/
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    background-color: rgba(85,85,85,0.6);
+    z-index: 1000;
+    animation: fadein 2s;
+    opacity 0;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+header h2 {
+    font-family: "Fjalla One" ,sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    margin-left: 3%;
+}
+
+header h2 a:hover {
+    opacity: 1;
+}
+
+header nav {
+    float: right;
+    display: flex;
+    margin-top: 5px;
+    margin-right: 3%;
+}
+
+header nav li {
+    display: inline;
+    float: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+/*Hero stíles*/
+
+.hero {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.hero h1{
+    color: ;
+    font: bold 90px "Fjalla One" ,sans-serif;
+    margin-bottom: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-transform: uppercase;
+}
+
+.hero .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+.hero-content-area {
+    opacity: 0;
+    animation: 2s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero a.button {
+    padding: 20px 46px;
+    color: #555555;
+}
+
+/*kepek styles
+
+.kepek {
+    padding: 1% 0 26.5%
+}
+
+
+Slider styles
+
+slider {
+    display: block;
+    width: 50%;
+    height: 50%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: absolute;
+}
+
+slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+slide:nth-child(1){
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url("../img/opening.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(2){
+    animation-delay: 2s;
+    background-image: url("../img/asd.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(3){
+    animation-delay: 5s;
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(4){
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url("../img/asd2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+slide p {
+    font-family: "Fjalla One" ,sans-serif;
+    font-size: 70px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 340px;
+    color: #fff;
+}
+
+@keyframes slide {
+    0% { left 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%}
+    30.0001% { left: -100%; width: 0%}
+    100% { left: 100%; width: 0%}
+}
+*/
+
+/*Info styles*/
+
+.info {
+    height: 1080px;
+    width: 1920px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px 80px;
+}
+
+.info .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+.info .tabla li{
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.info .tabla li h4 {
+    font: bold 30px "Fjalla One",sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.info .tabla li p {
+    font:bold 20px "Montserrat",sans-serif;
+}
+
+.info .tabla .keret {
+    box-shadow: 0px 16px 32px 0 rgba(224, 141, 8,0.4);
+    transition: 0.3s;
+    border-radius: 40px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.info .tabla .keret:hover{
+    box-shadow: 0 32px 64px 0 rgba(224, 141, 8,0.6);
+}
+
+.info .tabla .keret a.keretlink .container {
+    
+    padding: 10px 30px 30px 30px;
+    background: rgba(85,85,85,0.2);
+    opacity: 0.7;
+    border-top: 2px solid;
+    text-align: center;
+}
+
+/*
+.info .tabla .keret a.keretlink .container:hover{
+    opacity: 1;
+}
+*/
+
+.info .tabla .keret i {
+    padding: 60px;
+}
+
+/*Footer styles*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #555555;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+    align-self: center
+}
